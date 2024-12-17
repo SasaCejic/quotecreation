@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CL_reopen_Opp_block</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISCHANGED(StageName) &amp;&amp; 
+ISPICKVAL(PRIORVALUE(StageName),&quot;Closed Lost&quot;)</errorConditionFormula>
+    <errorMessage>CL Opps cant be reopened!</errorMessage>
+</ValidationRule>

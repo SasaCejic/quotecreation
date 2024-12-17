@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EA_Closed_Won_Stage_fields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( Record_Type_Name__c = &quot;Playable Ads&quot;,
+     ISPICKVAL(StageName, &quot;Closed Won&quot;),
+     OR(
+        ISBLANK(TEXT( Country__c )),
+        ISBLANK( Campaign_Start_Date__c ),
+        ISBLANK( Campaign_End_Date__c ),
+        ISBLANK( CloseDate ),
+        ISBLANK( CPM__c ),
+        ISBLANK( Creative_Type__c ),
+        ISBLANK( Creative_Languages__c ),
+        ISBLANK( Creatives_in_Total__c ),
+        ISBLANK( TEXT(Design_Resources_Needed__c )),
+        ISBLANK( TEXT(Dev_Resources_Needed__c )),
+        ISBLANK( SBQQ__PrimaryQuote__c ),
+        ISNULL( SBQQ__PrimaryQuote__c ),
+        ISBLANK(  No_of_Primary_Contacts__c ),
+        TEXT( Approval_Status__c )&lt;&gt;&quot;Approved&quot;,
+        ISBLANK( Debriefing_Date__c ),
+        ISBLANK( TEXT(Reporting_Sent__c )),
+        ISBLANK( Campaign_Costs_EUR__c ),
+        ISBLANK( Consulting_Fee_EUR__c ),
+								ISBLANK( Payment_Terms__c ), 
+								ISBLANK( Finance_Contact__c ),
+        ISBLANK( Impressions_Delivered__c )
+        )
+)</errorConditionFormula>
+    <errorMessage>Opps in the &quot;Closed Won&quot; Stage must be Approved and have the following fields populated:
+Debriefing Date, Reporting Sent, Campaign Costs, Consulting Fee, Impressions delivered,Payment Terms, Finance Contact and all fields from previous Stages as well as.</errorMessage>
+</ValidationRule>

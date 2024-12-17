@@ -1,0 +1,49 @@
+<template>
+    <template lwc:if={existingOpportunity}>
+   <!-- modal header start -->
+        <header class="slds-modal__header">
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Create Duplicate Opportunity</h2>
+        </header>
+       
+        <!-- modal body start -->
+                <lightning-record-edit-form
+                  style="margin: 0px;"
+                  density="compact"
+                  object-api-name="Opportunity"
+                  onerror={showErrorMessage}
+                  onsuccess={showSuccessMessage}
+                >
+
+                    <div  style = "padding: 2em; margin: 0px;" class="slds-grid" >
+                        <div class="slds-col slds-size_1-of-2">
+                            <template for:each={fieldsToShow} for:item="field">
+                                <lightning-input-field key = {field.fieldApiName} field-name={field.fieldApiName} value={field.value} required={field.required}></lightning-input-field>
+                            </template>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <template for:each={fieldsToShow2} for:item="field">
+                                <lightning-input-field key = {field.fieldApiName} field-name={field.fieldApiName} value={field.value} required={field.required}></lightning-input-field>
+                            </template>
+                        </div>
+                    </div>
+
+                    <template for:each={hiddenFields} for:item="field">
+                        <lightning-input-field key = {field.fieldApiName}  field-name={field.fieldApiName} class = "slds-hidden" style="display:none;" value={field.value}></lightning-input-field>
+                    </template>
+
+                    <template for:each={hiddenBlankFields} for:item="field">
+                        <lightning-input-field key = {field.fieldApiName} field-name={field.fieldApiName} class = "slds-hidden" style="display:none;"></lightning-input-field>
+                    </template>
+                  
+                </lightning-record-edit-form>
+                
+                <!-- modal footer start -->
+                <div class="slds-modal__footer">
+                    <lightning-button class="slds-button slds-button_brand" variant="brand" label="Cancel" onclick = {closeModal}></lightning-button>
+                    <lightning-button class="slds-button slds-button_brand" variant="brand" type="submit" label="Save" onclick = {handleSubmit}></lightning-button>
+                </div>
+    </template>
+    <template lwc:else>
+        <h1>Opportunity record to duplicate not found</h1>
+    </template>      
+</template>

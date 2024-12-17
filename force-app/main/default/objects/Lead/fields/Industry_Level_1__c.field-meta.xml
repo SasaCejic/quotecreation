@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry_Level_1__c</fullName>
+    <externalId>false</externalId>
+    <label>Industry Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Industry_Level_2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Industry_Level_1_Global_Value_Set</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Specialty Stores</controllingFieldValue>
+            <controllingFieldValue>Convenience Stores</controllingFieldValue>
+            <controllingFieldValue>Department Stores / Shopping Centers</controllingFieldValue>
+            <controllingFieldValue>Discount Stores</controllingFieldValue>
+            <controllingFieldValue>Electronics and Technology Stores</controllingFieldValue>
+            <controllingFieldValue>Grocery and Supermarkets</controllingFieldValue>
+            <controllingFieldValue>Home Improvement and Hardware Stores</controllingFieldValue>
+            <controllingFieldValue>Online Retailers / eComm</controllingFieldValue>
+            <controllingFieldValue>Other Retail</controllingFieldValue>
+            <controllingFieldValue>Pharmacies and Drugstores</controllingFieldValue>
+            <valueName>Retail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Entertainment</controllingFieldValue>
+            <controllingFieldValue>Sports Clubs</controllingFieldValue>
+            <valueName>Entertainment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <controllingFieldValue>Other Financial Institutions</controllingFieldValue>
+            <valueName>Financial institutions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Hotels / Accommodation</controllingFieldValue>
+            <controllingFieldValue>Other Leisure, Travel and Tourism</controllingFieldValue>
+            <controllingFieldValue>Tourism Destinations</controllingFieldValue>
+            <controllingFieldValue>Travel</controllingFieldValue>
+            <valueName>Leisure, Travel and Tourism</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Agency</controllingFieldValue>
+            <controllingFieldValue>Media Agency</controllingFieldValue>
+            <controllingFieldValue>Other Agencies</controllingFieldValue>
+            <valueName>Agencies</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Lottery</controllingFieldValue>
+            <controllingFieldValue>Other Gambling</controllingFieldValue>
+            <controllingFieldValue>Casinos</controllingFieldValue>
+            <valueName>Gambling</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quick Service Restaurants</controllingFieldValue>
+            <valueName>Quick Service Restaurants</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>B2B</controllingFieldValue>
+            <valueName>B2B</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Logistics / Transportation (B2B)</controllingFieldValue>
+            <valueName>Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <valueName>Manufacturing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Media</controllingFieldValue>
+            <valueName>Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Professional Services</controllingFieldValue>
+            <valueName>Professional Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Consumer Electronics</controllingFieldValue>
+            <controllingFieldValue>Food, Beverage and Tobacco</controllingFieldValue>
+            <controllingFieldValue>Healthcare and Pharmaceuticals</controllingFieldValue>
+            <controllingFieldValue>Home and Personal Care Brands</controllingFieldValue>
+            <controllingFieldValue>Household and Cleaning Product Manufacturers</controllingFieldValue>
+            <controllingFieldValue>Other Consumer Goods</controllingFieldValue>
+            <controllingFieldValue>Personal Care and Cosmetics Brands</controllingFieldValue>
+            <controllingFieldValue>Pet Care and Pet Food Brands</controllingFieldValue>
+            <valueName>Consumer Goods</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Technology / Software</controllingFieldValue>
+            <valueName>Technology / Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecommunications</controllingFieldValue>
+            <valueName>Telecommunications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Other</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

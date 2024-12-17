@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_check_for_EAD_RT</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(OR($User.Division =&quot;Sales Ops&quot;,
+       $User.Department =&quot;Marketing&quot;,
+       AND($User.Department =&quot;Finance &amp; Legal&quot;,
+           NOT( $User.Alias = &quot;rafi&quot;))
+        )
+    )
+&amp;&amp;
+AND(Record_Type_Name__c = &quot;EngagementAds&quot;,
+				AND(TEXT(StageName)&lt;&gt;&quot;Appointment&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Discovery Call&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Follow Up&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Offer&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Committed&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Closed Won&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Closed Lost&quot;
+							)
+				)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Please change the Stage to one of the following values: Appointment, Discovery Call, Follow Up, Offer, Committed, Closed Won</errorMessage>
+</ValidationRule>

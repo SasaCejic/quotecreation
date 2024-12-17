@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Success_Manager__c</fullName>
+    <externalId>false</externalId>
+    <label>Assigned Success Manager</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Philipp Suter</fullName>
+                <default>false</default>
+                <label>Philipp Suter</label>
+            </value>
+            <value>
+                <fullName>Anja Ott</fullName>
+                <default>false</default>
+                <label>Anja Ott</label>
+            </value>
+            <value>
+                <fullName>Rune Heyden</fullName>
+                <default>false</default>
+                <label>Rune Heyden</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

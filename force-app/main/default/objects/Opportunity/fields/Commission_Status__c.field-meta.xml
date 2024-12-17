@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commission_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( 
+   AND(TEXT(StageName)=&quot;Closed Won&quot;,  Commission_Paid__c = FALSE,  Invoice_Paid__c = FALSE), &quot;Eligible&quot;,
+IF( 
+   AND(TEXT(StageName)=&quot;Closed Won&quot;,  Commission_Paid__c = FALSE,  Invoice_Paid__c = TRUE), &quot;Outstanding&quot;,
+IF( 
+   AND(TEXT(StageName)=&quot;Closed Won&quot;,  Commission_Paid__c = TRUE), &quot;Paid&quot;,&quot;N/A&quot;
+  )))</formula>
+    <label>Commission Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

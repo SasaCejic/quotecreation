@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Sales_from_Edit_Old_Opportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(OR($UserRole.Name =&quot;Top Management&quot;,
+$UserRole.Name =&quot;Salesforce Manager&quot;))
+
+&amp;&amp;
+
+AND(
+    ISPICKVAL(StageName, &quot;Closed Won&quot;),
+    OR(
+        CloseDate &gt;= DATE(YEAR(TODAY()), MONTH(TODAY())-1, 1),
+        CloseDate &lt;= DATE(YEAR(TODAY()), MONTH(TODAY())-1, DAY(DATE( YEAR(TODAY()), MONTH(TODAY()), 1) - 1))
+    ),
+    OR(
+        ISCHANGED(Amount),
+        ISCHANGED(CountOfProducts__c),
+        ISCHANGED(CloseDate),
+        ISCHANGED(Contract_period_start__c),
+        ISCHANGED(Contract_period_end__c)
+    )
+)</errorConditionFormula>
+    <errorMessage>Please note that opportunities marked as &quot;Closed Won&quot; in the previous month cannot have the following fields modified:
+Amount
+Count of Products
+Close Date
+Contract Period Start
+Contract Period End
+This restriction maintains accurate historical data.</errorMessage>
+</ValidationRule>

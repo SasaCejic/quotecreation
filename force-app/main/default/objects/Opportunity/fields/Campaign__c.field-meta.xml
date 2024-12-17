@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign__c</fullName>
+    <externalId>false</externalId>
+    <label>Campaign</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>LeadSource</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Campaign</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Mail Campaign - Honeysales</controllingFieldValue>
+            <valueName>Standard Mail Campaign</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mail Campaign - Honeysales</controllingFieldValue>
+            <valueName>Mail Campaign - Advent</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mail Campaign - Honeysales</controllingFieldValue>
+            <controllingFieldValue>Mail Campaign - Honeysales - no response</controllingFieldValue>
+            <valueName>Felix</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mail Campaign - Honeysales</controllingFieldValue>
+            <valueName>DMEXCO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Network</controllingFieldValue>
+            <valueName>Dani</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Network</controllingFieldValue>
+            <valueName>Jörg Trouvain à CH/DE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Network</controllingFieldValue>
+            <valueName>Christoph Richterich à weltweit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Network</controllingFieldValue>
+            <valueName>Rudi Kobza à AT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Network</controllingFieldValue>
+            <valueName>Sacha Bär à CH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mail Campaign - Honeysales - no response</controllingFieldValue>
+            <valueName>Call Center Nils</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mail Campaign - Honeysales - no response</controllingFieldValue>
+            <valueName>Jens</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

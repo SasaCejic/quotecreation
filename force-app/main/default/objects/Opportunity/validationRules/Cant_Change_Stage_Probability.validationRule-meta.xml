@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cant_Change_Stage_Probability</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(ISPICKVAL(StageName, &quot;Appointment&quot;),
+       ISPICKVAL(StageName, &quot;No Show&quot;),
+       ISPICKVAL(StageName, &quot;Backlog&quot;),
+       ISPICKVAL(StageName, &quot;Closed Lost&quot;)
+       ),
+      Probability&gt;0.1)</errorConditionFormula>
+    <errorDisplayField>Probability</errorDisplayField>
+    <errorMessage>Probability can&apos;t be more than 10% for the choosen Stage</errorMessage>
+</ValidationRule>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Check_for_Cloned_Opps</fullName>
+    <active>true</active>
+    <description>Prevents Users from populating all fields on a Cloned Opportunity</description>
+    <errorConditionFormula>AND(
+ ISCLONE() = TRUE,
+ OR(
+   NOT(ISBLANK(Invoice_Number__c )),
+   Invoice_Paid__c = TRUE,
+   Commission_Paid__c = TRUE,
+   NOT(ISNULL(Paid_Amount__c ))
+)
+)</errorConditionFormula>
+    <errorMessage>When Cloning the Opportunity, please make sure the following fields are empty:
+Invoice Number, Invoice &amp; Commission Paid, Paid Amount</errorMessage>
+</ValidationRule>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage_check_for_NB_POV_RT</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(OR($User.Division =&quot;Sales Ops&quot;,
+       $User.Department =&quot;Marketing&quot;,
+       AND($User.Department =&quot;Finance &amp; Legal&quot;,
+           NOT( $User.Alias = &quot;rafi&quot;))
+        )
+    )
+&amp;&amp;
+AND(OR(Record_Type_Name__c = &quot;NewBusiness&quot;,
+							Record_Type_Name__c = &quot;ProofOfValue&quot;),
+				AND(TEXT(StageName)&lt;&gt;&quot;Appointment&quot;,
+        TEXT(StageName)&lt;&gt;&quot;No Show&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Discovery Call&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Follow Up&quot;,
+        TEXT(StageName)&lt;&gt;&quot;2nd Follow Up&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Backlog&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Offer&quot;,
+								TEXT(StageName)&lt;&gt;&quot;Committed&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Closed Won&quot;,
+        TEXT(StageName)&lt;&gt;&quot;Closed Lost&quot;
+							)
+				)</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Please change the Stage to one of the following values: Appointment, No Show, Discovery Call, Follow Up, 2nd Follow Up, Backlog, Offer, Committed, Closed Won, Closed Lost</errorMessage>
+</ValidationRule>

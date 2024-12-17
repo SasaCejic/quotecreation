@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_City_Validation</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISBLANK(BillingCity)</errorConditionFormula>
+    <errorMessage>Billing City is a required field. Please enter a value before saving the account</errorMessage>
+</ValidationRule>

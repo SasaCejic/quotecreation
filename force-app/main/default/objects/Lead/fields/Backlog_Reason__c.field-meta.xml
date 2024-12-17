@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Backlog_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Frozen Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>other priorities</fullName>
+                <default>false</default>
+                <label>other priorities</label>
+            </value>
+            <value>
+                <fullName>other partner</fullName>
+                <default>false</default>
+                <label>other partner</label>
+            </value>
+            <value>
+                <fullName>too early / wrong time</fullName>
+                <default>false</default>
+                <label>too early / wrong time</label>
+            </value>
+            <value>
+                <fullName>no interest</fullName>
+                <default>false</default>
+                <label>no interest</label>
+            </value>
+            <value>
+                <fullName>wrong person</fullName>
+                <default>false</default>
+                <label>wrong person</label>
+            </value>
+            <value>
+                <fullName>not reachable</fullName>
+                <default>false</default>
+                <label>not reachable</label>
+            </value>
+            <value>
+                <fullName>no capacity</fullName>
+                <default>false</default>
+                <label>no capacity</label>
+            </value>
+            <value>
+                <fullName>wrong company</fullName>
+                <default>false</default>
+                <label>wrong company</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

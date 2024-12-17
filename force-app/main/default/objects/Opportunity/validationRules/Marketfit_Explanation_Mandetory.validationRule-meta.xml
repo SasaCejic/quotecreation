@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marketfit_Explanation_Mandetory</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(OR($UserRole.Name =&quot;Top Management&quot;,
+$UserRole.Name =&quot;Salesforce Manager&quot;))
+
+&amp;&amp;
+
+AND(ISBLANK(Marketfit_Explanation__c), 
+    ISPICKVAL(Marketfit__c ,&apos;Poor&apos;))</errorConditionFormula>
+    <errorMessage>Market Fit is set to Poor, and Market fit Description is a required field. Please enter a value in this field to save the record.</errorMessage>
+</ValidationRule>

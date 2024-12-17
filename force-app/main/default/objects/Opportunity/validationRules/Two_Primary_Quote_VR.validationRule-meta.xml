@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Two_Primary_Quote_VR</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISCHANGED( SBQQ__PrimaryQuote__c ) , 
+     NOT(  ISBLANK(PRIORVALUE( SBQQ__PrimaryQuote__c ))),
+     NOT(ISBLANK(SBQQ__PrimaryQuote__c )))</errorConditionFormula>
+    <errorMessage>You cannot add two Primary Quotes on the same Opportunity.</errorMessage>
+</ValidationRule>

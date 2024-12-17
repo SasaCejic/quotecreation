@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Group__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>LeadSource</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Business Network</fullName>
+                <default>false</default>
+                <label>Business Network</label>
+            </value>
+            <value>
+                <fullName>Fairs</fullName>
+                <default>false</default>
+                <label>Fairs</label>
+            </value>
+            <value>
+                <fullName>Own Media</fullName>
+                <default>false</default>
+                <label>Own Media</label>
+            </value>
+            <value>
+                <fullName>Own Sourced</fullName>
+                <default>false</default>
+                <label>Own Sourced</label>
+            </value>
+            <value>
+                <fullName>Paid Media</fullName>
+                <default>false</default>
+                <label>Paid Media</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Sales Tools</fullName>
+                <default>false</default>
+                <label>Sales Tools</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DMWF Amsterdam (21.11-22.11)</controllingFieldValue>
+            <controllingFieldValue>OMR 2022 (17./18.5)</controllingFieldValue>
+            <controllingFieldValue>ICE (London 02.23)</controllingFieldValue>
+            <controllingFieldValue>E-commerce Berlin (23.2.23)</controllingFieldValue>
+            <controllingFieldValue>DMWF_London (Pre qualified)</controllingFieldValue>
+            <controllingFieldValue>Europshop (26.2.-02.03.)</controllingFieldValue>
+            <controllingFieldValue>DMWF London (23.6-24.6.)</controllingFieldValue>
+            <controllingFieldValue>Richmond Event Bad Ragaz (28.6-29.6)</controllingFieldValue>
+            <controllingFieldValue>Richmond London (9.3.23)</controllingFieldValue>
+            <controllingFieldValue>Shoptalk US (27.3.-28.3.23)</controllingFieldValue>
+            <controllingFieldValue>E-commerce Zrenjanin (20.4.23)</controllingFieldValue>
+            <controllingFieldValue>DMEXCO</controllingFieldValue>
+            <controllingFieldValue>OMR 2023 (9.5.-10.5.)</controllingFieldValue>
+            <controllingFieldValue>Web Summit 2022</controllingFieldValue>
+            <valueName>Fairs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Alchemy Network</controllingFieldValue>
+            <controllingFieldValue>The Missing Element</controllingFieldValue>
+            <controllingFieldValue>Ckagency</controllingFieldValue>
+            <controllingFieldValue>Business Network</controllingFieldValue>
+            <valueName>Business Network</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Webinar</controllingFieldValue>
+            <controllingFieldValue>Chatbot</controllingFieldValue>
+            <controllingFieldValue>Webpage</controllingFieldValue>
+            <controllingFieldValue>Lead Forensics</controllingFieldValue>
+            <valueName>Own Media</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sales Navigator</controllingFieldValue>
+            <controllingFieldValue>Cognism</controllingFieldValue>
+            <valueName>Sales Tools</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Operatix</controllingFieldValue>
+            <controllingFieldValue>Call Center - Nils</controllingFieldValue>
+            <controllingFieldValue>Aexus</controllingFieldValue>
+            <controllingFieldValue>LinkedIn - Motion</controllingFieldValue>
+            <controllingFieldValue>Felix (Caller)</controllingFieldValue>
+            <controllingFieldValue>Robert (Caller)</controllingFieldValue>
+            <controllingFieldValue>Mail Campaign - Honeysales</controllingFieldValue>
+            <controllingFieldValue>Mail Campaign - Honeysales - no response</controllingFieldValue>
+            <valueName>Partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>own sourced</controllingFieldValue>
+            <valueName>Own Sourced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Linkedin Ad</controllingFieldValue>
+            <controllingFieldValue>Social Ads</controllingFieldValue>
+            <valueName>Paid Media</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

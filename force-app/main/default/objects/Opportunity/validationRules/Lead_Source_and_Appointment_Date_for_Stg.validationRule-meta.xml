@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_and_Appointment_Date_for_Stg</fullName>
+    <active>true</active>
+    <description>This validation is used to prevent users from moving oppty to other stages without having the Appotiemnt date and Lead Source field fulfilled</description>
+    <errorConditionFormula>NOT(OR($UserRole.Name =&quot;Top Management&quot;,
+$UserRole.Name =&quot;Salesforce Manager&quot;))
+
+&amp;&amp;
+
+AND(
+NOT($RecordType.Name = &quot;Renewal&quot;),
+AND(
+ISCHANGED(StageName),
+OR(
+ISPICKVAL(LeadSource, &quot;&quot;),
+ISBLANK(Appointment_Date__c)
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Lead Source and Appointment Date are required when moving an opportunity to another stage.</errorMessage>
+</ValidationRule>

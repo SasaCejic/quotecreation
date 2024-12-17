@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commission__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(CONTAINS(&quot;Tailor_Made: Renewal: Single_Campaign&quot;,TEXT(Type)), 0.05,
+IF(CONTAINS(&quot;Addon: Services: License_Upgrade&quot;,TEXT(Type)),0.1,
+IF(ISPICKVAL(Lead_Category__c, &quot;Own Sourced&quot;),0.12,
+IF(ISPICKVAL(Lead_Category__c, &quot;Company Sourced&quot;),0.08,
+IF(ISPICKVAL(Lead_Category__c, &quot;Inbound&quot;),0.05,0)
+))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Commission %</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

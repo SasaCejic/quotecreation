@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ICP__c</fullName>
+    <externalId>false</externalId>
+    <label>ICP</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Industry_Level_2__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>ICP_Global_Value_Set</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Specialty Stores</controllingFieldValue>
+            <controllingFieldValue>Lottery</controllingFieldValue>
+            <controllingFieldValue>Other Gambling</controllingFieldValue>
+            <controllingFieldValue>Quick Service Restaurants</controllingFieldValue>
+            <controllingFieldValue>Convenience Stores</controllingFieldValue>
+            <controllingFieldValue>Department Stores / Shopping Centers</controllingFieldValue>
+            <controllingFieldValue>Discount Stores</controllingFieldValue>
+            <controllingFieldValue>Electronics and Technology Stores</controllingFieldValue>
+            <controllingFieldValue>Grocery and Supermarkets</controllingFieldValue>
+            <controllingFieldValue>Home Improvement and Hardware Stores</controllingFieldValue>
+            <controllingFieldValue>Online Retailers / eComm</controllingFieldValue>
+            <controllingFieldValue>Consumer Electronics</controllingFieldValue>
+            <controllingFieldValue>Food, Beverage and Tobacco</controllingFieldValue>
+            <controllingFieldValue>Healthcare and Pharmaceuticals</controllingFieldValue>
+            <controllingFieldValue>Home and Personal Care Brands</controllingFieldValue>
+            <controllingFieldValue>Household and Cleaning Product Manufacturers</controllingFieldValue>
+            <controllingFieldValue>Other Consumer Goods</controllingFieldValue>
+            <controllingFieldValue>Personal Care and Cosmetics Brands</controllingFieldValue>
+            <controllingFieldValue>Pet Care and Pet Food Brands</controllingFieldValue>
+            <controllingFieldValue>Casinos</controllingFieldValue>
+            <controllingFieldValue>Other Retail</controllingFieldValue>
+            <controllingFieldValue>Pharmacies and Drugstores</controllingFieldValue>
+            <valueName>ICP 1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Entertainment</controllingFieldValue>
+            <controllingFieldValue>Sports Clubs</controllingFieldValue>
+            <controllingFieldValue>Insurance</controllingFieldValue>
+            <controllingFieldValue>Retail Banking</controllingFieldValue>
+            <controllingFieldValue>Hotels / Accommodation</controllingFieldValue>
+            <controllingFieldValue>Other Leisure, Travel and Tourism</controllingFieldValue>
+            <controllingFieldValue>Tourism Destinations</controllingFieldValue>
+            <controllingFieldValue>Travel</controllingFieldValue>
+            <valueName>ICP 2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Creative Agency</controllingFieldValue>
+            <controllingFieldValue>Media Agency</controllingFieldValue>
+            <controllingFieldValue>Other Agencies</controllingFieldValue>
+            <controllingFieldValue>B2B</controllingFieldValue>
+            <controllingFieldValue>Other Financial Institutions</controllingFieldValue>
+            <controllingFieldValue>Logistics / Transportation (B2B)</controllingFieldValue>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Media</controllingFieldValue>
+            <controllingFieldValue>Professional Services</controllingFieldValue>
+            <controllingFieldValue>Technology / Software</controllingFieldValue>
+            <controllingFieldValue>Telecommunications</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <valueName>Not ICP</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

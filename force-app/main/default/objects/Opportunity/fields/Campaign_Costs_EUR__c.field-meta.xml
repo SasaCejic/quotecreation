@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Campaign_Costs_EUR__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Total Amount in CHF (eCPM Media + Targeting Costs + DSP Fees) converted in EUR</inlineHelpText>
+    <label>Campaign Costs</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,47 @@
+<template>
+    <!-- modal header start -->
+    <header class="slds-modal__header">
+        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+            <lightning-icon icon-name="utility:close"
+                alternative-text="close"
+                variant="inverse"
+                size="small" >
+            </lightning-icon>
+            <span class="slds-assistive-text">Close</span>
+        </button>
+
+        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Create a Quote</h2>
+    </header>
+       
+    <!-- modal body start -->
+    <div style = "padding: 0;" class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+        <lightning-record-edit-form
+            object-api-name="SBQQ__Quote__c"
+            onerror = {showErrorMessage}
+            onsuccess={showSuccessMessage}
+                    
+        >
+            <div  style = "padding: 2em;" class="slds-grid">
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name = {opportunityField} value = {recordId} disabled = true></lightning-input-field>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-input-field field-name = {primaryContactField} value = {primaryContact}></lightning-input-field>
+                    <lightning-input-field field-name = {offerTitleField}></lightning-input-field>
+                    <lightning-input-field field-name = {subscriptionTermField}></lightning-input-field>
+                </div>
+            </div>
+
+            <lightning-input-field style = "height:0px;" class = "slds-hidden" field-name = {accountField} value = {account} disabled = true></lightning-input-field>
+            <lightning-input-field style = "height:0px;" class = "slds-hidden" field-name = {pricebookField} value = {pricebook} disabled = true></lightning-input-field>
+            <lightning-input-field style = "height:0px;" class = "slds-hidden" field-name = {salesRepField} value = {userId} disabled = true></lightning-input-field>
+
+        </lightning-record-edit-form>
+        <!-- modal footer start -->
+        <div class="slds-modal__footer">
+            <lightning-button class="slds-button slds-button_brand" variant="brand" label="Cancel" onclick = {closeModal}></lightning-button>
+            <lightning-button class="slds-button slds-button_brand" variant="brand" type="submit" label="Save" onclick = {onSubmitHandler}></lightning-button>
+        </div>
+            
+    </div>
+</template>

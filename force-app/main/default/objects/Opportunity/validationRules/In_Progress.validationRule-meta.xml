@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>In_Progress</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(OR($UserRole.Name =&quot;Top Management&quot;,
+$UserRole.Name =&quot;Salesforce Manager&quot;))
+
+&amp;&amp;
+
+AND(
+OR (
+ISPICKVAL(StageName, &quot;In Progress&quot;),
+ISPICKVAL(StageName, &quot;Follow Up&quot;),
+ISPICKVAL(StageName, &quot;Offer&quot;),
+ISPICKVAL(StageName, &quot;Backlog&quot;),
+ISPICKVAL(StageName, &quot;Closed Won&quot;),
+ISPICKVAL(StageName, &quot;Closed Lost&quot;)
+),
+OR(
+ISBLANK( NextStep )))</errorConditionFormula>
+    <errorMessage>Please fill in all required fields in order to save the new stage in Progress:
+Type, Interests, Next Step</errorMessage>
+</ValidationRule>

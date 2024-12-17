@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Backlog</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(StageName, &quot;Backlog&quot;),
+ISBLANK( TEXT( Backlog_Reason__c ))
+)</errorConditionFormula>
+    <errorMessage>Please select a Backlog Reason in order to save the Backlog Status - a new task will be created automatically</errorMessage>
+</ValidationRule>

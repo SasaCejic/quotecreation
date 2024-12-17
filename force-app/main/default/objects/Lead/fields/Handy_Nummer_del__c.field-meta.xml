@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Handy_Nummer_del__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>This field is used as reference with the new field which is editable</inlineHelpText>
+    <label>Handy Nummer (old)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Phone</type>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_check_for_Addon_Services_RT</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(OR($User.Division =&quot;Sales Ops&quot;,
+       $User.Department =&quot;Marketing&quot;,
+       AND($User.Department =&quot;Finance &amp; Legal&quot;,
+           NOT( $User.Alias = &quot;rafi&quot;))
+        )
+    )
+&amp;&amp;
+AND(Record_Type_Name__c = &quot;AddonOrServices&quot;,
+				AND(TEXT(Type)&lt;&gt;&quot;License_Upgrade&quot;,
+								TEXT(Type)&lt;&gt;&quot;Addon&quot;,
+								TEXT(Type)&lt;&gt;&quot;Services&quot;,
+							 TEXT(Type)&lt;&gt;&quot;Tailor_Made&quot;)
+				)</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>Please change the value in &apos;Type&apos; field to one of the following: License Upgrade, Addon, Services, Tailor Made.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EA_Account_equal_Agency_error</fullName>
+    <active>true</active>
+    <errorConditionFormula>Account.Id = Related_Account__r.Id</errorConditionFormula>
+    <errorDisplayField>Related_Account__c</errorDisplayField>
+    <errorMessage>Account and Related Account CAN NOT be the same.</errorMessage>
+</ValidationRule>

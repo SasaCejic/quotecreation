@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pipeline_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Pipeline Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Pipeline_Source__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetName>Pipeline_Category</valueSetName>
+        <valueSettings>
+            <controllingFieldValue>Business Network</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Company Sourced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Events</controllingFieldValue>
+            <controllingFieldValue>Own Sourced</controllingFieldValue>
+            <controllingFieldValue>Sales Tools</controllingFieldValue>
+            <valueName>Own Sourced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Own Media</controllingFieldValue>
+            <controllingFieldValue>Paid Media</controllingFieldValue>
+            <valueName>Inbound</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

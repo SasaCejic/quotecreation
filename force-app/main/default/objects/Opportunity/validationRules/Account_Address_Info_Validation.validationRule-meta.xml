@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Address_Info_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(OR($UserRole.Name =&quot;Top Management&quot;,
+$UserRole.Name =&quot;Salesforce Manager&quot;))
+
+&amp;&amp;
+
+AND(
+ISPICKVAL(StageName, &quot;Offer&quot;),
+OR(
+ISBLANK(Account.BillingCity),
+ISBLANK(Account.BillingCountry),
+ISBLANK(Account.BillingStreet),
+ISBLANK(Account.BillingPostalCode)
+)
+)</errorConditionFormula>
+    <errorDisplayField>AccountId</errorDisplayField>
+    <errorMessage>&quot;Cannot move Opportunity to Offer Stage without completing the required Account fields: Billing City, Billing Country, Billing Street, and Billing Postal Code.&quot;</errorMessage>
+</ValidationRule>

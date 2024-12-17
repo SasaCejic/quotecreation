@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Category__c</fullName>
+    <externalId>false</externalId>
+    <label>Lead Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Lead_Group__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Company Sourced</fullName>
+                <default>false</default>
+                <label>Company Sourced</label>
+            </value>
+            <value>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <label>Inbound</label>
+            </value>
+            <value>
+                <fullName>Own Sourced</fullName>
+                <default>false</default>
+                <label>Own Sourced</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Business Network</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <valueName>Company Sourced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fairs</controllingFieldValue>
+            <controllingFieldValue>Own Sourced</controllingFieldValue>
+            <controllingFieldValue>Sales Tools</controllingFieldValue>
+            <valueName>Own Sourced</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Own Media</controllingFieldValue>
+            <valueName>Inbound</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

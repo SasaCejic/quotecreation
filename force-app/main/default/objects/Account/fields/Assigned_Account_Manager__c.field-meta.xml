@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assigned_Account_Manager__c</fullName>
+    <externalId>false</externalId>
+    <label>Assigned Account Manager</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mike Stäcker</fullName>
+                <default>false</default>
+                <label>Mike Stäcker</label>
+            </value>
+            <value>
+                <fullName>Felix Huber</fullName>
+                <default>false</default>
+                <label>Felix Huber</label>
+            </value>
+            <value>
+                <fullName>No AM</fullName>
+                <default>false</default>
+                <label>No AM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

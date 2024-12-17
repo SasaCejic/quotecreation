@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mirage__Add_to_Call_List</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Add to Call Campaign</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/apex/Mirage__MirageAddToCallList?obj=Lead&amp;id={!Lead.Id}</url>
+</WebLink>

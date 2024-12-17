@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UpgradeAddon_StageChanged_CheckFields</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    OR(
+        RecordType.DeveloperName == &apos;AddonOrServices&apos;,
+        RecordType.DeveloperName == &apos;Upgrade&apos;
+    ),
+    ISCHANGED(StageName),
+    OR(
+        ISPICKVAL(StageName, &apos;Offer&apos;),
+        ISPICKVAL(StageName, &apos;Offer (80%)&apos;),
+        ISPICKVAL(StageName, &apos;Negotiation&apos;),
+        ISPICKVAL(StageName, &apos;Committed&apos;),
+        ISPICKVAL(StageName, &apos;Closed Won&apos;)
+    ),
+    OR(
+        ISBLANK(NextStep),
+        CountOfProducts__c == 0
+    )
+)</errorConditionFormula>
+    <errorMessage>Please fill in all required fields in order to save the next stage:
+Next Step, Products</errorMessage>
+</ValidationRule>
